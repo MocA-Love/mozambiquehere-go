@@ -22,13 +22,13 @@ import (
 
 func main() {
 	apexClient := client.DefaultClient("api_token")
-	data, err := apexClient.GetUserByName(models.PlatformPC, "MocA-Love")
+	data, err := apexClient.GetUserByName(models.PlatformPC, "MaguNium")
 
 	if err != nil {
 		panic(err)
 	}
 
-	fmt.Println(data.Global.Level) //38
+	fmt.Println(data.Global.Level) //252
 }
 
 ```

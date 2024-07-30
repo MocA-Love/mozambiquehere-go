@@ -88,6 +88,7 @@ const (
 	pathMapRotation      = path("maprotation")
 	pathCraftingRotation = path("crafting")
 	pathShop             = path("shop")
+	pathServerStatus     = path("servers")
 	pathOrigin           = path("origin")
 	pathNametoUID        = path("nametouid")
 )

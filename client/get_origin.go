@@ -2,7 +2,6 @@ package client
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 
 	"github.com/MocA-Love/mozambiquehere-go/v4/domain/response"
@@ -18,8 +17,6 @@ func (c *clientImplementation) GetOrigin(username string) (response.GetUIDRespon
 	if err != nil {
 		return resp, err
 	}
-
-	fmt.Println(string(body))
 
 	err = json.Unmarshal(body, &resp)
 	if err != nil {

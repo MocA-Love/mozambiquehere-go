@@ -7,20 +7,11 @@ import (
 	"github.com/MocA-Love/mozambiquehere-go/v4/domain/response"
 )
 
-const serverStatusEndpoint = "https://apexlegendsstatus.com/servers.json"
-
 func (c *clientImplementation) GetServerStatus() (response.GetServerStatusResponse, error) {
 	var resp response.GetServerStatusResponse
-	var req *http.Request
-	var err error
 
-	req, err = http.NewRequest(http.MethodGet, serverStatusEndpoint, nil)
-	if err != nil {
-		return resp, err
-	}
+	body, err := c.doEndpointRequest(http.MethodGet, pathServerStatus, map[string]string{})
 
-	var body []byte
-	body, err = c.doRequest(req)
 	if err != nil {
 		return resp, err
 	}
