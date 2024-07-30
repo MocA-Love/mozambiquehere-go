@@ -23,6 +23,9 @@ type Client interface {
 	GetMatchHistoryGet(platform models.Platform, usernames []string) (response.GetMatchHistoryGetResponse, error)
 	GetMatchHistoryInfo(platform models.Platform, usernames []string) (response.GetMatchHistoryInfoResponse, error)
 
+	//Crafting rotation API
+	GetCraftingRotation() (response.GetCraftingRotationResponse, error)
+
 	//News API
 	GetNews(lang models.NewsLanguage) (response.GetNewsResponse, error)
 
@@ -73,19 +76,20 @@ type clientImplementation struct {
 }
 
 const apiEndpoint = "api.mozambiquehe.re"
-const apiVersion = "4"
+const apiVersion = "5"
 
 type path string
 
 //nolint:varcheck,deadcode
 const (
-	pathBridge      = path("bridge")
-	pathNews        = path("news")
-	pathGamedata    = path("gamedata")
-	pathMapRotation = path("maprotation")
-	pathShop        = path("shop")
-	pathOrigin      = path("origin")
-	pathNametoUID   = path("nametouid")
+	pathBridge           = path("bridge")
+	pathNews             = path("news")
+	pathGamedata         = path("gamedata")
+	pathMapRotation      = path("maprotation")
+	pathCraftingRotation = path("crafting")
+	pathShop             = path("shop")
+	pathOrigin           = path("origin")
+	pathNametoUID        = path("nametouid")
 )
 
 func NewClient(token string, endpoint string, client *http.Client) Client {
