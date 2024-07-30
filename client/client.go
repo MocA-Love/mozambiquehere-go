@@ -29,6 +29,9 @@ type Client interface {
 	//Server status API
 	GetServerStatus() (response.GetServerStatusResponse, error)
 
+	//Name to UID API
+	GetUIDByName(platform models.Platform, username string) (response.GetUIDResponse, error)
+
 	/**
 		TODO: Game data API
 
@@ -56,6 +59,8 @@ type Client interface {
 
 	//TODO: Shop API
 	//GetShop() (response.GetShop, error)
+
+
 }
 
 type clientImplementation struct {
@@ -65,7 +70,7 @@ type clientImplementation struct {
 }
 
 const apiEndpoint = "api.mozambiquehe.re"
-const apiVersion = "5"
+const apiVersion = "4"
 
 type path string
 
@@ -76,6 +81,7 @@ const (
 	pathGamedata    = path("gamedata")
 	pathMapRotation = path("maprotation")
 	pathShop        = path("shop")
+	pathNametoUID   = path("nametouid")
 )
 
 func NewClient(token string, endpoint string, client *http.Client) Client {
