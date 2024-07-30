@@ -23,6 +23,9 @@ type Client interface {
 	GetMatchHistoryGet(platform models.Platform, usernames []string) (response.GetMatchHistoryGetResponse, error)
 	GetMatchHistoryInfo(platform models.Platform, usernames []string) (response.GetMatchHistoryInfoResponse, error)
 
+	//Map rotation API
+	GetMapRotation() (response.GetMapRotationResponse, error)
+
 	//Predator API
 	GetPredator() (response.GetPredatorResponse, error)
 
@@ -62,9 +65,6 @@ type Client interface {
 
 		hmm :thonk:
 	**/
-
-	//TODO: Map rotation API
-	//GetMapRotation() (response.GetMapRotationResponse, error)
 
 	//TODO: Shop API <= store no longer exists
 	//GetShop() (response.GetShop, error)
