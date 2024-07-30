@@ -29,6 +29,9 @@ type Client interface {
 	//Server status API
 	GetServerStatus() (response.GetServerStatusResponse, error)
 
+	//Origin API
+	GetOrigin(username string) (response.GetUIDResponse, error)
+
 	//Name to UID API
 	GetUIDByName(platform models.Platform, username string) (response.GetUIDResponse, error)
 
@@ -81,6 +84,7 @@ const (
 	pathGamedata    = path("gamedata")
 	pathMapRotation = path("maprotation")
 	pathShop        = path("shop")
+	pathOrigin      = path("origin")
 	pathNametoUID   = path("nametouid")
 )
 
