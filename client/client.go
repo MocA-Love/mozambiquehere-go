@@ -65,7 +65,7 @@ type clientImplementation struct {
 }
 
 const apiEndpoint = "api.mozambiquehe.re"
-const apiVersion = "4"
+const apiVersion = "5"
 
 type path string
 
