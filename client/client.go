@@ -1,7 +1,7 @@
 package client
 
 import (
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 
@@ -170,7 +170,7 @@ func (c *clientImplementation) doRequest(req *http.Request) ([]byte, error) {
 	defer res.Body.Close()
 
 	var body []byte
-	body, err = ioutil.ReadAll(res.Body)
+	body, err = io.ReadAll(res.Body)
 	if err != nil {
 		return nil, err
 	}
