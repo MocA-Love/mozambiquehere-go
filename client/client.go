@@ -23,6 +23,9 @@ type Client interface {
 	GetMatchHistoryGet(platform models.Platform, usernames []string) (response.GetMatchHistoryGetResponse, error)
 	GetMatchHistoryInfo(platform models.Platform, usernames []string) (response.GetMatchHistoryInfoResponse, error)
 
+	//Predator API
+	GetPredator() (response.GetPredatorResponse, error)
+
 	//Crafting rotation API
 	GetCraftingRotation() (response.GetCraftingRotationResponse, error)
 
@@ -63,7 +66,7 @@ type Client interface {
 	//TODO: Map rotation API
 	//GetMapRotation() (response.GetMapRotationResponse, error)
 
-	//TODO: Shop API
+	//TODO: Shop API <= store no longer exists
 	//GetShop() (response.GetShop, error)
 
 
@@ -83,11 +86,12 @@ type path string
 //nolint:varcheck,deadcode
 const (
 	pathBridge           = path("bridge")
-	pathNews             = path("news")
 	pathGamedata         = path("gamedata")
 	pathMapRotation      = path("maprotation")
+	pathPredator         = path("predator")
+	//pathShop             = path("shop")
 	pathCraftingRotation = path("crafting")
-	pathShop             = path("shop")
+	pathNews             = path("news")
 	pathServerStatus     = path("servers")
 	pathOrigin           = path("origin")
 	pathNametoUID        = path("nametouid")
