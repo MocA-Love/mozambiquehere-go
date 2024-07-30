@@ -7,7 +7,7 @@ type GetUsersResponse []GetUserResponse
 type GetUserResponse struct {
 	Global struct {
 		Name                string          `json:"name"`
-		UID                 int64           `json:"uid"`
+		UID                 string          `json:"uid"`
 		Platform            models.Platform `json:"platform"`
 		Level               int             `json:"level"`
 		ToNextLevelPercent  int             `json:"toNextLevelPercent"`
@@ -99,7 +99,7 @@ type GetUserResponse struct {
 			Value int         `json:"value"`
 		} `json:"ordnance_destroyed"`
 		Kd struct {
-			Value int    `json:"value"`
+			Value string `json:"value"`
 			Name  string `json:"name"`
 		} `json:"kd"`
 	} `json:"total"`
