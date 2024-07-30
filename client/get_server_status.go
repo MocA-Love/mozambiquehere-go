@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/anVlad11/mozambiquehere-go/v4/domain/response"
+	"github.com/MocA-Love/mozambiquehere-go/v4/domain/response"
 )
 
 const serverStatusEndpoint = "https://apexlegendsstatus.com/servers.json"

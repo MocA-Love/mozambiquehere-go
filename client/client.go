@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/anVlad11/mozambiquehere-go/v4/domain/models"
-	"github.com/anVlad11/mozambiquehere-go/v4/domain/response"
+	"github.com/MocA-Love/mozambiquehere-go/v4/domain/models"
+	"github.com/MocA-Love/mozambiquehere-go/v4/domain/response"
 )
 
 type Client interface {

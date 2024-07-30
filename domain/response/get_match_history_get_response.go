@@ -1,8 +1,8 @@
 package response
 
 import (
-	"github.com/anVlad11/mozambiquehere-go/v4/domain/errors"
-	"github.com/anVlad11/mozambiquehere-go/v4/domain/models"
+	"github.com/MocA-Love/mozambiquehere-go/v4/domain/errors"
+	"github.com/MocA-Love/mozambiquehere-go/v4/domain/models"
 )
 
 type GetMatchHistoryGetResponseItem struct {

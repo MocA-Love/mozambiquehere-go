@@ -5,7 +5,7 @@ This library is a Golang API wrapper for https://apexlegendsapi.com/ .
 ## Install
 
 ```golang
-go get github.com/anVlad11/mozambiquehere-go/v4
+go get github.com/MocA-Love/mozambiquehere-go/v4
 ```
 
 ## Usage example
@@ -16,13 +16,13 @@ package main
 import (
 	"fmt"
 
-	"github.com/anVlad11/mozambiquehere-go/v4/client"
-	"github.com/anVlad11/mozambiquehere-go/v4/domain/models"
+	"github.com/MocA-Love/mozambiquehere-go/v4/client"
+	"github.com/MocA-Love/mozambiquehere-go/v4/domain/models"
 )
 
 func main() {
 	apexClient := client.DefaultClient("api_token")
-	data, err := apexClient.GetUserByName(models.PlatformPC, "anvlad11")
+	data, err := apexClient.GetUserByName(models.PlatformPC, "MocA-Love")
 
 	if err != nil {
 		panic(err)

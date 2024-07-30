@@ -3,7 +3,7 @@ package errors
 import (
 	"fmt"
 
-	"github.com/anVlad11/mozambiquehere-go/v4/domain/models"
+	"github.com/MocA-Love/mozambiquehere-go/v4/domain/models"
 )
 
 func GetUnexpectedEventTypeError(expected models.EventType, got models.EventType) error {

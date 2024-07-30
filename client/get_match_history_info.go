@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/anVlad11/mozambiquehere-go/v4/domain/models"
-	"github.com/anVlad11/mozambiquehere-go/v4/domain/response"
+	"github.com/MocA-Love/mozambiquehere-go/v4/domain/models"
+	"github.com/MocA-Love/mozambiquehere-go/v4/domain/response"
 )
 
 func (c *clientImplementation) GetMatchHistoryInfo(platform models.Platform, usernames []string) (response.GetMatchHistoryInfoResponse, error) {

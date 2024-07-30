@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/anVlad11/mozambiquehere-go/v4/domain/models"
-	"github.com/anVlad11/mozambiquehere-go/v4/domain/response"
+	"github.com/MocA-Love/mozambiquehere-go/v4/domain/models"
+	"github.com/MocA-Love/mozambiquehere-go/v4/domain/response"
 )
 
 func (c *clientImplementation) GetUserByName(platform models.Platform, username string) (response.GetUserResponse, error) {
